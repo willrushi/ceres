@@ -14,5 +14,14 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
         "Operating System :: Linux"
-    ]
+    ],
+    url="https://github.com/willrushi/ceres",
+    author="William Roberts",
+    author_email="willprobertss@gmail.com",
+    keywords="python docker ctf pentest",
+    license="MIT",
+    packages=["ceres"],
+    install_requires=[],
+    include_package_data=True,
+    zip_safe=False
 )
