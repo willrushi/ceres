@@ -1,19 +1,35 @@
 import subprocess
 import os
+from ceres_colour import red
 
-home = os.path.expanduser("~")
+def create_directory(path):
+    print("Creating {}...".format(path))
+    try:
+        os.mkdir(path)
+        print("{} created successfully.".format(path))
+    except FileExistsError:
+        # It's okay to continue after this as the user may have a half-installed version
+        print(red("ERROR: Directory {} already exists.".format(path)))
+    except PermissionError:
+        print(red("ERROR: Permission denied creating {}.".format(path)))
+        exit()
+
 
 def init():
     print("Now preparing your system for use with Ceres.")
 
-    print("Creating {}/.ceres...".format(home))
-    path = os.path.join(home, ".ceres")
-    try:
-        os.mkdir(path)
-    except FileExistsError:
-        print("ERROR: Directory {} already exists.".format(path))
-        exit()
-    except PermissionError:
-        print("ERROR: Permission denied creating {}.".format(path))
-        exit()
-    print("Ceres directory created successfully.")
+    # Create the Ceres directory
+    user = os.path.expanduser("~")
+    user_path = os.path.join(user, ".ceres")
+    create_directory(user_path)
+
+    # Create the home folder
+    home_path = os.path.join(user_path, "home")
+    create_directory(home_path)
+
+    # Create the snapshots folder
+    snapshots_path = os.path.join(user_path, "snapshots")
+    create_directory(snapshots_path)
+
+    # Create the ceres_conf.json file
+    

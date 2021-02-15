@@ -18,3 +18,15 @@ Ana, for being someone I could always look up to, as well as being a neverending
 
 
 
+
+# Development
+
+## Python Wrapper
+
+### Planning
+
+### Packaging
+
+### Modulular Code
+
+### Commenting

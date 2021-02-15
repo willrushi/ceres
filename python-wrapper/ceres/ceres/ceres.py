@@ -17,13 +17,18 @@ class Ceres:
         if(args.choice == "init"):
             ceres_init.init()
 
-        if(args.choice == "backup"):
-            print("Running backup")
+        if(args.choice == "snapshot"):
+            print("Running snapshot")
+            # TODO: --revert
 
         if(args.choice == "run"):
             print("")
-            # add detached mode
-            # add openvpn flag
+            # TODO: add detached mode
+            # TODO: add openvpn flag
+
+        if(args.choice == "config"):
+            print("")
+            # TODO: add default ovpn file
     
 
 
