@@ -19,7 +19,28 @@ Ana, for being someone I could always look up to, as well as being a neverending
 
 
 
+# Planning
+
+## Architecture / Tech stack
+### Docker
+### Python
+### OpenVPN
+
+## Docker Image
+### Base image
+
+## Networking
+### VPN Access
+
+
+
+
+
 # Development
+
+## Docker Image
+### Planning
+- python > docker_compose > docker
 
 ## Python Wrapper
 

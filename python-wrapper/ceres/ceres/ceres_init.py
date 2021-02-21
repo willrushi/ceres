@@ -32,4 +32,5 @@ def init():
     create_directory(snapshots_path)
 
     # Create the ceres_conf.json file
-    
+
+    # Prompt for which version of Ceres to pull
