@@ -6,9 +6,9 @@ from ceres_colour import red, yellow, green
 client = docker.from_env()
 
 def check_container_up():
-    for container in client.containers.list():
-        if "ceres" in container.name:
-            return True
+    c = client.containers.get("ceres")
+    if c and c.status == "running":
+        return True
     return False
 
 
@@ -33,3 +33,6 @@ def run():
     else:
         print(f"{red('ERROR:')} Failed to start Ceres container. Logs below:")
         print(stderr.decode("utf-8"))
+
+if __name__ == "__main__":
+    run()
