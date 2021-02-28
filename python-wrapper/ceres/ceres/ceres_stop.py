@@ -1,13 +1,7 @@
 import docker
-from ceres_colour import red, yellow, green
+from ceres_util import red, yellow, green, check_container_up
 
 client = docker.from_env()
-
-def check_container_up():
-    c = client.containers.get("ceres")
-    if c and c.status == "running":
-        return True
-    return False
 
 def stop():
     if not check_container_up():

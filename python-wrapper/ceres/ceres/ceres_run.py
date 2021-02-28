@@ -1,16 +1,7 @@
 import docker
 import subprocess
 from subprocess import PIPE
-from ceres_colour import red, yellow, green
-
-client = docker.from_env()
-
-def check_container_up():
-    c = client.containers.get("ceres")
-    if c and c.status == "running":
-        return True
-    return False
-
+from ceres_util import red, yellow, green, check_container_up
 
 def run():
     # Check if container is already running.
