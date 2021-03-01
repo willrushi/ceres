@@ -75,3 +75,6 @@ Install the library:
 sudo python3 setup.py install
 ```
 Ceres should now be installed on your machine and can be accessed using `ceres [command]`.
+
+# Feedback
+You can leave your feedback using the google form found [here](https://forms.gle/2Z3q7KE86EuCLVDq8).
