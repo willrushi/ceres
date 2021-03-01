@@ -44,6 +44,7 @@ class Ceres:
 
         if(args.choice == "revert"):
             ceres_revert.revert()
+            # TODO: block revert if container running
 
         if(args.choice == "config"):
             print("Feature not yet implemented")
