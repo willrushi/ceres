@@ -1,14 +1,18 @@
 import yaml
 import os
+import sys
 
-config = {
+default_conf = {
     "version" : "3.9",
 
     "services" : {
         "ceres" : {
-            "build" : ".",
+            "build" : os.path.expanduser("~/.ceres"),
+            "image" : "ceres",
+            "container_name" : "ceres",
+            "hostname" : "ceres",
             "volumes" : [
-                "/home/will/.ceres/home:/ceres"
+                os.path.expanduser("~/.ceres/home") + ":/ceres"
             ],
             "cap_add" : [
                 "NET_ADMIN"
@@ -22,6 +26,11 @@ config = {
         }
     }
 }
+
+def init():
+    path = os.path.expanduser("~/.ceres/docker-compose.yml")
+    with open(path, "w") as file:
+        yaml.dump(default_conf, file, sort_keys=False)
 
 def ask(question):
     ans = input(question + " y/n\n")
@@ -48,6 +57,5 @@ def config():
         yaml.dump(config, file, sort_keys=False)
 
     
-
-
-config()
+if __name__ == "__main__":
+    config()

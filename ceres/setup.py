@@ -1,10 +1,10 @@
-from setuptools import setup
+import setuptools
 
 def readme():
     with open("README.md") as readme:
         return readme.read()
 
-setup(
+setuptools.setup(
     name="ceres",
     description="A wrapper for the Ceres docker image, used as a penetration testing environment.",
     long_description=readme(),
@@ -20,8 +20,13 @@ setup(
     author_email="willprobertss@gmail.com",
     keywords="python docker ctf pentest",
     license="MIT",
-    packages=["ceres"],
+    packages=setuptools.find_packages(),
     install_requires=[],
     include_package_data=True,
-    zip_safe=False
+    zip_safe=False,
+    entry_points={
+        'console_scripts': [
+            'ceres = ceres.__main__:main'
+        ]
+    }
 )

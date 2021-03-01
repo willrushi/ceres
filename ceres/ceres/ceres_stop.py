@@ -1,5 +1,5 @@
 import docker
-from ceres_util import red, yellow, green, check_container_up
+from ceres.ceres_util import red, yellow, green, check_container_up
 
 client = docker.from_env()
 

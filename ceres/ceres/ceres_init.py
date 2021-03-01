@@ -1,6 +1,6 @@
 import subprocess
 import os
-from ceres_colour import red
+from ceres.ceres_util import red
 
 def create_directory(path):
     print("Creating {}...".format(path))

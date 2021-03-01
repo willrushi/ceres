@@ -3,10 +3,13 @@ import docker
 
 def check_container_up():
     client = docker.from_env()
-    c = client.containers.get("ceres")
-    if c and c.status == "running":
-        return True
-    return False
+    try:
+        c = client.containers.get("ceres")
+        if c.status == "running":
+            return True
+        return False
+    except:
+        return False
 
 def green(str):
     return f"{Fore.GREEN}{str}{Style.RESET_ALL}"

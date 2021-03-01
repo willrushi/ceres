@@ -3,6 +3,8 @@
 Ceres is a package containing a Docker image with a Python-based wrapper. The image itself is intended to be used as a penetration testing or CTF environment, similar to a Kali Linux VM - as such, it includes relevant tools from the Kali repository, as well as functionality for connecting to VPNs. The wrapper gives an easy interface for interacting with the container (such as stopping, starting, and checking statistics), as well as providing some extra functionality like taking snapshots of the shared folder.
 
 # Installation
+These installation instructions assume that you are running Ubuntu, or a similar Debian-based Linux distro.
+
 
 ## Docker
 Docker must be installed to use the image. Instructions can be found [here](https://docs.docker.com/engine/install/ubuntu/), or follow the steps below.

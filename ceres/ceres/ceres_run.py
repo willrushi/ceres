@@ -1,7 +1,8 @@
 import docker
 import subprocess
+import os
 from subprocess import PIPE
-from ceres_util import red, yellow, green, check_container_up
+from ceres.ceres_util import red, yellow, green, check_container_up
 
 def run():
     # Check if container is already running.
@@ -11,7 +12,7 @@ def run():
 
     print("Starting Ceres container...")
     # Docker-compose uses stdout to pipe messages from the docker containers and stdout to print its own log messages.
-    p = subprocess.Popen(["docker-compose", "-f", "../../../docker-config/docker-compose.yml", "up", "-d"], stdout=PIPE, stderr=PIPE)
+    p = subprocess.Popen(["docker-compose", "-f", os.path.expanduser("~/.ceres/docker-compose.yml"), "up", "-d"], stdout=PIPE, stderr=PIPE)
 
     # Get the output from the subprocess
     (stdout, stderr) = p.communicate()

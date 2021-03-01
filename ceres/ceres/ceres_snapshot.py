@@ -1,7 +1,7 @@
 import os
 import shutil
 from datetime import datetime
-from ceres_util import red, green
+from ceres.ceres_util import red, green
 
 def snapshot():
     snap_name = datetime.now().strftime("%y-%m-%d_%H:%M:%S")
