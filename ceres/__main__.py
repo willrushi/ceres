@@ -1,5 +1,5 @@
 import argparse
-from ceres import ceres_init, ceres_dockerfile, ceres_run, ceres_enter, ceres_stop, ceres_status, ceres_snapshot, ceres_config
+from ceres import ceres_init, ceres_dockerfile, ceres_run, ceres_enter, ceres_stop, ceres_status, ceres_snapshot, ceres_revert, ceres_config
 
 class Ceres:
     def __init__(self):
@@ -41,6 +41,9 @@ class Ceres:
 
         if(args.choice == "snapshot"):
             ceres_snapshot.snapshot()
+
+        if(args.choice == "revert"):
+            ceres_revert.revert()
 
         if(args.choice == "config"):
             print("Feature not yet implemented")
