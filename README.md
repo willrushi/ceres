@@ -64,18 +64,14 @@ First clone this repo locally:
 git clone https://github.com/willrushi/ceres.git
 ```
 
-Change directories in to the Python library dir:
+Change directories in to the Python library dir and install the required libraries using pip:
 ```bash
-cd ceres/ceres
-```
-
-Install the required libraries using pip:
-```bash
+cd ceres
 pip3 install -r requirements.txt
 ```
 
 Install the library:
 ```bash
-python3 setup.py
+sudo python3 setup.py install
 ```
 Ceres should now be installed on your machine and can be accessed using `ceres [command]`.

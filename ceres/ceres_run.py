@@ -10,7 +10,7 @@ def run():
         print(f"{red('ERROR:')} Ceres is already running. SSH in or use {yellow('ceres enter')} to enter directly.")
         exit()
 
-    print("Starting Ceres container...")
+    print("Starting Ceres container (may take a while if first time)...")
     # Docker-compose uses stdout to pipe messages from the docker containers and stdout to print its own log messages.
     p = subprocess.Popen(["docker-compose", "-f", os.path.expanduser("~/.ceres/docker-compose.yml"), "up", "-d"], stdout=PIPE, stderr=PIPE)
 
