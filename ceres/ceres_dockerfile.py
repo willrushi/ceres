@@ -26,4 +26,4 @@ def write_dockerfile():
         print("Written Dockerfile")
 
 if __name__ == "__main__":
-    write_dockerfile
+    write_dockerfile()
