@@ -1,6 +1,14 @@
 from colorama import Fore, Style
 import docker
 
+"""
+Returns current state of Ceres container
+
+This function uses the Python SDK to retrieve the Ceres container from a docker Client object, returning True if this container exists and False if it does not.
+
+return : Boolean
+"""
+
 def check_container_up():
     client = docker.from_env()
     try:
