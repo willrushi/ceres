@@ -19,10 +19,5 @@ def revert():
     shutil.copytree(src_dir, dest_dir)
     print("Complete!")
 
-"""
-except:
-    print("Error.")
-"""
-
 if __name__ == "__main__":
     revert()
