@@ -22,7 +22,7 @@ class Ceres:
             ceres_init.init()
             print("Creating initial docker-compose configuration...")
             ceres_dockerfile.write_dockerfile()
-            ceres_config.init()
+            ceres_config.config()
             print("Done! Ceres is now installed.")
 
         if(args.choice == "run"):

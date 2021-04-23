@@ -30,7 +30,3 @@ def init():
     # Create the snapshots folder
     snapshots_path = os.path.join(user_path, "snapshots")
     create_directory(snapshots_path)
-
-    # Create the ceres_conf.json file
-
-    # Prompt for which version of Ceres to pull
